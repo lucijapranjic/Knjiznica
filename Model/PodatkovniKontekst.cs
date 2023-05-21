@@ -9,6 +9,9 @@ namespace Knjiznica.Model
 {
     public class PodatkovniKontekst
     {
+        
+        PodatkovniKontekst kontekst = new PodatkovniKontekst();
+
         private List<Ucenik> _ucenici;
         private List<Knjiga> _knjige;
         private List<Posudba> _posudbe;
@@ -17,7 +20,7 @@ namespace Knjiznica.Model
         public List<Knjiga> Knjige { get { return _knjige; } }
         public List<Posudba> Posudbe { get { return _posudbe; } }
 
-
+    
         public PodatkovniKontekst()
         {
             this._ucenici = UcitajUcenike();
@@ -135,6 +138,6 @@ namespace Knjiznica.Model
                     sw.WriteLine("{ 0}|{ 1}|{ 2}|{ 3}", p.Ucenik.OIB, p.Knjiga.ISBN, p.DatumPosudbe.ToShortDateString(), p.BrojDana);
                 }
             }
-        }
+        } 
     }
 }
